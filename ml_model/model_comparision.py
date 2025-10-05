@@ -197,11 +197,11 @@ from sklearn.metrics import (
 # ---------- 1) Upload CSV ----------
 try:
     from google.colab import files  # works in Colab
-    print("📤 Please upload your CSV (e.g., heart_attack_train_processed.csv)")
+    print("Please upload your CSV (e.g., heart_attack_train_processed.csv)")
     uploaded = files.upload()
     csv_name = next(k for k in uploaded.keys() if k.lower().endswith(".csv"))
     df = pd.read_csv(io.BytesIO(uploaded[csv_name]))
-    print(f"✅ Loaded {csv_name}  shape={df.shape}")
+    print(f"Loaded {csv_name}  shape={df.shape}")
 except Exception as e:
     raise RuntimeError(f"CSV upload/read failed: {e}")
 
@@ -257,7 +257,7 @@ Xtr, Xte, ytr, yte = train_test_split(
     X, y, test_size=0.2, random_state=42, stratify=y
 )
 
-print("\n🔢 Class balance (overall):")
+print("\nClass balance (overall):")
 print(y.value_counts(normalize=True).rename("proportion").round(3))
 
 # ---------- 4) Preprocessing (numeric + categorical) ----------
@@ -327,7 +327,7 @@ def evaluate(model, name, Xte, yte, proba_ok=True):
 evaluate(baseline, "Baseline (Majority Class)", Xte, yte, proba_ok=False)
 evaluate(logreg,   "Logistic Regression",      Xte, yte, proba_ok=True)
 
-print("\n✅ Done. If performance seems low, consider: feature engineering, class_weight='balanced', "
+print("\nDone. If performance seems low, consider: feature engineering, class_weight='balanced', "
       "or threshold tuning using predicted probabilities.")
 
 # === Decision Tree & Random Forest ===
