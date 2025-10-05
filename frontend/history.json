@@ -64,38 +64,5 @@
       "probability": 0.6,
       "risk_level": "High"
     }
-  },
-  {
-    "id": "0c57f507-1055-4a7d-a334-8d1755b47fc7",
-    "timestamp": "2025-10-05T12:57:43",
-    "input": {
-      "age": 30,
-      "hypertension": 0,
-      "diabetes": 0,
-      "cholesterol_level": 200,
-      "obesity": 0,
-      "waist_circumference": 80,
-      "sleep_hours": 7.0,
-      "fasting_blood_sugar": 90,
-      "triglycerides": 150,
-      "previous_heart_disease": 0,
-      "medication_usage": 0,
-      "region_Urban": 1,
-      "income_level_middle": 0,
-      "smoking_status_Never": 1,
-      "smoking_status_Past": 0,
-      "smoking_status_Unknown": 0,
-      "physical_activity_Low": 0,
-      "stress_level_Moderate": 0,
-      "stress_level_moderate": 0,
-      "EKG_results_Normal": 1,
-      "gender_Male": 1
-    },
-    "result": {
-      "message": "No heart attack risk detected",
-      "prediction": 0,
-      "probability": 0.0,
-      "risk_level": "Low"
-    }
   }
 ]
