@@ -318,7 +318,8 @@ def show_history():
         if st.button("Delete this record", type="secondary"):
             _delete_history(selected_item.get("id"))
             st.success("Record deleted.")
-            st.rerun()
+            st.experimental_rerun()
 
 if __name__ == "__main__":
     main()
+
