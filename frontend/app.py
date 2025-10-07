@@ -13,7 +13,7 @@ st.set_page_config(
 )
 
 # Backend API URL
-API_URL = "http://localhost:5000/api"
+API_URL = st.secrets.get("API_URL", os.getenv("API_URL", "http://localhost:5000/api"))
 
 # Local history storage
 HISTORY_PATH = os.path.join(os.path.dirname(__file__), "history.json")
